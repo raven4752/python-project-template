@@ -10,10 +10,8 @@ As it is an all-in-one solution, the tools used are rather opinionated. They inc
 * Paver_ for running miscellaneous tasks
 * Setuptools_ for distribution (Setuptools and Distribute_ have merged_)
 * Sphinx_ for documentation
-* flake8_ for source code checking
 * pytest_ for unit testing
 * mock_ for mocking (not required by the template, but included anyway)
-* tox_ for testing on multiple Python versions
 
 If you are new to Python or new to creating Python projects, see Kenneth Reitz's `Hitchhiker's Guide to Python`_ for an explanation of some of the tools used here.
 
@@ -22,10 +20,8 @@ If you are new to Python or new to creating Python projects, see Kenneth Reitz's
 .. _Distribute: http://pythonhosted.org/distribute/
 .. _merged: http://pythonhosted.org/setuptools/merge.html
 .. _Sphinx: http://sphinx-doc.org/
-.. _flake8: https://pypi.python.org/pypi/flake8
 .. _pytest: http://pytest.org/latest/
 .. _mock: http://www.voidspace.org.uk/python/mock/
-.. _tox: http://testrun.org/tox/latest/
 .. _Hitchhiker's Guide to Python: http://docs.python-guide.org/en/latest/
 
 Project Setup
@@ -123,14 +119,12 @@ Using Paver
 The ``pavement.py`` file comes with a number of tasks already set up for you. You can see a full list by typing ``paver help`` in the project root directory. The following are included::
 
     Tasks from pavement:
-    lint             - Perform PEP8 style check, run PyFlakes, and run McCabe complexity metrics on the code.
     doc_open         - Build the HTML docs and open them in a web browser.
     coverage         - Run tests and show test coverage report.
     doc_watch        - Watch for changes in the Sphinx documentation and rebuild when changed.
     test             - Run the unit tests.
     get_tasks        - Get all paver-defined tasks.
     commit           - Commit only if all the tests pass.
-    test_all         - Perform a style check and run all unit tests.
 
 For example, to run the both the unit tests and lint, run the following in the project root directory::
 
@@ -140,13 +134,7 @@ To build the HTML documentation, then open it in a web browser::
 
     paver doc_open
 
-Using Tox
----------
 
-Tox is a tool for running your tests on all supported Python versions.
-Running it via ``tox`` from the project root directory calls ``paver test_all`` behind the scenes for each Python version,
-and does an additional test run to ensure documentation generation works flawlessly.
-You can customize the list of supported and thus tested Python versions in the ``tox.ini`` file.
 
 Pip ``requirements[-dev].txt`` files vs. Setuptools ``install_requires`` Keyword
 ------------------------------------------------------------------
@@ -171,10 +159,7 @@ Supported Python Versions
 
 Python Project Template supports the following versions out of the box:
 
-* CPython 2.6, 2.7, 3.3
-* PyPy 1.9
-
-CPython 3.0-3.2 may also work but are at this point unsupported. PyPy 2.0.2 is known to work but is not run on Travis-CI.
+* CPython 2.7,3.5
 
 Jython_ and IronPython_ may also work, but have not been tested. If there is interest in support for these alternative implementations, please open a feature request!
 
@@ -201,13 +186,9 @@ The template also uses a number of other pieces of software, whose licenses are 
 +------------------------+----------------------------------+
 |colorama                |Modified BSD License              |
 +------------------------+----------------------------------+
-|flake8                  |MIT/X11 License                   |
-+------------------------+----------------------------------+
 |mock                    |Modified BSD License              |
 +------------------------+----------------------------------+
 |pytest                  |MIT/X11 License                   |
-+------------------------+----------------------------------+
-|tox                     |MIT/X11 License                   |
 +------------------------+----------------------------------+
 
 Issues

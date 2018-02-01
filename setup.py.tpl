@@ -172,14 +172,6 @@ def _test():
     return pytest.main(PYTEST_FLAGS + [TESTS_DIRECTORY])
 
 
-def _test_all():
-    """Run lint and tests.
-
-    :return: exit code
-    """
-    return  _test()
-
-
 # The following code is to allow tests to be run with `python setup.py test'.
 # The main reason to make this possible is to allow tests to be run as part of
 # Setuptools' automatic run of 2to3 on the source code. The recommended way to
