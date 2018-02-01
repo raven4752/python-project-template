@@ -11,7 +11,7 @@ import subprocess
 sys.path.insert(0,'.')
 from setup import (
     setup_dict, get_project_files, print_success_message,
-    print_failure_message, _test, ,
+    print_failure_message, _test ,
     CODE_DIRECTORY, DOCS_DIRECTORY, TESTS_DIRECTORY, PYTEST_FLAGS)
 
 from paver.easy import options, task, needs, consume_args

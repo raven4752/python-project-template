@@ -3,7 +3,7 @@
 =========================
 .. image:: https://travis-ci.org/raven4752/python-project-template.svg?branch=master
     :target: https://travis-ci.org/raven4752/python-project-template
-This project provides a best-practices template Python project which integrates several different tools. It saves you work by setting up a number of things, including documentation, code checking, and unit test runners.
+This project provides a best-practices template Python project which integrates several different tools. It saves you work by setting up a number of things, including documentation, and unit test runners.
 
 As it is an all-in-one solution, the tools used are rather opinionated. They include:
 
@@ -90,14 +90,13 @@ Instructions
 
        $ paver test_all
        ---> pavement.test_all
-       No style errors
        ========================================= test session starts =========================================
-       platform darwin -- Python 2.7.3 -- pytest-2.3.4
-       collected 5 items
+       platform linux -- Python 3.5.4, pytest-3.0.6, py-1.4.32, pluggy-0.4.0
+       collected 4 items
 
        tests/test_main.py .....
 
-       ====================================== 5 passed in 0.05 seconds =======================================
+       ====================================== 4 passed in 0.05 seconds =======================================
          ___  _   ___ ___ ___ ___
         | _ \/_\ / __/ __| __|   \
         |  _/ _ \\__ \__ \ _|| |) |
