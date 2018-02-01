@@ -32,7 +32,8 @@ class TestMain(object):
         with raises(SystemExit) as exc_info:
             main(['progname', versionarg])
         out, err = capsys.readouterr()
-        # Should print out version.
-        assert err == '{0} {1}\n'.format(metadata.project, metadata.version)
+        expect = '{0} {1}\n'.format(metadata.project, metadata.version)
+        # Should print out version in >=python 3.4,otherwise expect err version .
+        assert out == expect or err == expect
         # Should exit with zero return code.
         assert exc_info.value.code == 0
