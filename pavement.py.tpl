@@ -11,7 +11,7 @@ import subprocess
 sys.path.append('.')
 from setup import (
     setup_dict, get_project_files, print_success_message,
-    print_failure_message, _lint, _test, _test_all,
+    print_failure_message, _test, _test_all,
     CODE_DIRECTORY, DOCS_DIRECTORY, TESTS_DIRECTORY, PYTEST_FLAGS)
 
 from paver.easy import options, task, needs, consume_args
@@ -99,13 +99,6 @@ def test():
     raise SystemExit(_test())
 
 
-@task
-def lint():
-    # This refuses to format properly when running `paver help' unless
-    # this ugliness is used.
-    ('Perform PEP8 style check, run PyFlakes, and run McCabe complexity '
-     'metrics on the code.')
-    raise SystemExit(_lint())
 
 
 @task

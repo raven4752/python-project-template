@@ -158,22 +158,6 @@ def read(filename):
         return f.read()
 
 
-def _lint():
-    """Run lint and return an exit code."""
-    # Flake8 doesn't have an easy way to run checks using a Python function, so
-    # just fork off another process to do it.
-
-    # Python 3 compat:
-    # - The result of subprocess call outputs are byte strings, meaning we need
-    #   to pass a byte string to endswith.
-    project_python_files = [filename for filename in get_project_files()
-                            if filename.endswith(b'.py')]
-    retcode = subprocess.call(
-        ['flake8', '--max-complexity=10'] + project_python_files)
-    if retcode == 0:
-        print_success_message('No style errors')
-    return retcode
-
 
 def _test():
     """Run the unit tests.
@@ -193,7 +177,7 @@ def _test_all():
 
     :return: exit code
     """
-    return _lint() + _test()
+    return  _test()
 
 
 # The following code is to allow tests to be run with `python setup.py test'.

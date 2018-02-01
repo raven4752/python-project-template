@@ -6,12 +6,6 @@ pytest==3.0.6
 py==1.4.32
 mock==2.0.0
 
-# Linting
-flake8==3.3.0
-mccabe==0.6.1
-pep8==1.7.0
-pyflakes==1.5.0
-
 # Documentation
 Sphinx==1.5.2
 docutils==0.13.1
