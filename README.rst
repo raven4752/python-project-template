@@ -1,10 +1,8 @@
 =========================
  Python Project Template
 =========================
-
-.. image:: https://travis-ci.org/seanfisk/python-project-template.png
-   :target: https://travis-ci.org/seanfisk/python-project-template
-
+.. image:: https://travis-ci.org/raven4752/python-project-template.svg?branch=master
+    :target: https://travis-ci.org/raven4752/python-project-template
 This project provides a best-practices template Python project which integrates several different tools. It saves you work by setting up a number of things, including documentation, code checking, and unit test runners.
 
 As it is an all-in-one solution, the tools used are rather opinionated. They include:
