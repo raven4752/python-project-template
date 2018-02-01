@@ -1,14 +1,11 @@
 language: python
-python: 2.7
-env:
-  - TOXENV=py26
-  - TOXENV=py27
-  - TOXENV=py33
-  - TOXENV=pypy
-  - TOXENV=docs
+python:
+  - "3.5"
+  - "2.7"
+cache: pip
+# command to install dependencies
 install:
-  - pip install tox
-before_script:
-  - python internal/generate.py
+  - pip install -r requirements-dev.txt
 script:
-  - tox
+  - paver test # or py.test for Python versions 3.5 and below
+  - paver doc_html
